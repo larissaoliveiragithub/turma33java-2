@@ -1,5 +1,5 @@
 /**
- * @author Paulo, Matehus, Beatriz, Fernando e Leonardo. 
+ * @author Paulo, Matehus, Beatriz, Fernando, Larissa e Leonardo. 
  * ECOMMERCE - DEV SHOES
  
  * GENERATION 2021
@@ -16,7 +16,7 @@ public class Application {
 	
 	
 	static char desejaAdicionar = 'x', s = 's', n = 'n';
-	//############## VARI¡VEIS ###################
+	//############## VARI√ÅVEIS ###################
 		static char valor;
 		static double total = 0.0, totalFinal = 0.0;
 		static String desejaComprar = "";
@@ -28,9 +28,9 @@ public class Application {
 
 	//############## VETORES ###################
 	static String nomeProduto[] = { 
-			"TÍnis Nike          ", 
-			"TÍnis Adidas        ", 
-			"TÍnis Puma          ",
+			"T√™nis Nike          ", 
+			"T√™nis Adidas        ", 
+			"T√™nis Puma          ",
 			"Camisa Nike         ", 
 			"Camisa Lacoste      ", 
 			"Camisa Supreme      ", 
@@ -46,14 +46,14 @@ public class Application {
 	static int estoqueProduto[] = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
 	
 	
-	//############## FUN«√O - main ###################
+	//############## FUN√á√ÉO - main ###################
 	public static void main(String[] args) {
-		// AprentaÁ„o
+		// Aprenta√ß√£o
 		getApresentacao();
 		executarOperacao();
 	}
 
-	//############## FUN«√O - finalizarCompra ###################
+	//############## FUN√á√ÉO - finalizarCompra ###################
 
 	public static void finalizarCompra(int x) {
 		double valorTotal = 0, valorNota = 0.0, valorParcela, valorCompra = 0.0, valorPagamento = 0.00;
@@ -62,7 +62,7 @@ public class Application {
 		String emitirNota = "";
 		System.out.print("||||||||||||||||| Selecione forma de pagamento |||||||||||||||||||||\n");
 
-		System.out.println("\n1 - D…BITO \n2 - CR…DITO \n3 - PARCELADO (2X)");
+		System.out.println("\n1 - D√âBITO \n2 - CR√âDITO \n3 - PARCELADO (2X)");
 		System.out.print("\nPagamento: ");
 		
 		formaPagamento = mySc.nextInt();
@@ -71,30 +71,30 @@ public class Application {
 			valorCompra = total * (10.00 / 100.00);
 			valorTotal = total - valorCompra;
 			valorNota = valorTotal * (9.00 / 100.00);
-			System.out.printf("O valor total da compra È de: R$%.2f", valorTotal);
+			System.out.printf("O valor total da compra √© de: R$%.2f", valorTotal);
 			System.out.println(" (Desconto de 10%)");
 
 		}else if (formaPagamento == 2) {
 			valorCompra = total * (10.00 / 100.00);
 			valorTotal = total + valorCompra;
 			valorNota = valorTotal * (9.00 / 100.00);
-			System.out.printf("O valor total da compra È de: R$%.2f", valorTotal);
-			System.out.println(" AcrÈscimo de 10%");
+			System.out.printf("O valor total da compra √© de: R$%.2f", valorTotal);
+			System.out.println(" Acr√©scimo de 10%");
 
 		}else if (formaPagamento == 3) {
 			valorCompra = total * (15.00 / 100.00);
 			valorTotal = total + valorCompra;
 			valorNota = valorTotal * (9.00 / 100.00);
 			System.out.println("\n\n");
-			System.out.printf("O valor total da compra È de: R$%.2f", valorTotal);
+			System.out.printf("O valor total da compra √© de: R$%.2f", valorTotal);
 	
 			valorParcela = valorTotal / 2;
 			System.out.print("\nA conta totalizou 2 parcelas de: R$ " + valorParcela);
 		}
 		
-		System.out.printf("\nO imposto È de R$%.2f: ", valorNota);
+		System.out.printf("\nO imposto √© de R$%.2f: ", valorNota);
 		System.out.println("\n\n");
-		System.out.printf("E o valor da nota È de R$%.2f %s", valorTotal+valorNota,"com 9% de imposto");
+		System.out.printf("E o valor da nota √© de R$%.2f %s", valorTotal+valorNota,"com 9% de imposto");
 		System.out.println("\n\n");
 		System.out.print("Deseja imitir nota? S/N \n");
 		
@@ -103,12 +103,12 @@ public class Application {
 		if ("s".equalsIgnoreCase(emitirNota)) {
 			
 			System.out.println("\n\n\n\n\n\n");
-			System.out.print("\t\t\t\t#DevShoes - CodStyle È vida!\n\n");
+			System.out.print("\t\t\t\t#DevShoes - CodStyle √© vida!\n\n");
 			System.out.print("||||||||||||||||||||| NOTA FISCAL |||||||||||||||||||||||||\n\n");
 
 			System.out.printf("Valor impostos R$%.2f ", valorNota);
 			System.out.println("\n--------------------------------------------------------");
-			System.out.printf("Valor total da nota È de R$%.2f ", valorTotal+valorNota);
+			System.out.printf("Valor total da nota √© de R$%.2f ", valorTotal+valorNota);
 			System.out.println("\n--------------------------------------------------------");
 			System.out.println("\nObrigado.. Volte sempre!");
 			System.out.println("\n\n");
@@ -136,19 +136,19 @@ public class Application {
 			getApresentacao();	
 		}
 			//AQUI ACABA O IF DE FORA
-	}// AQUI ACABA A FUN«√O FORMA DE PAGAMENTO!
+	}// AQUI ACABA A FUN√á√ÉO FORMA DE PAGAMENTO!
 	
 
-//############## FUN«√O - executarOperaÁ„o ###################
+//############## FUN√á√ÉO - executarOpera√ß√£o ###################
 	public static void executarOperacao() {
 		
-		// FUN«√O listar produtos
+		// FUN√á√ÉO listar produtos
 		listarProdutos();
 		
-		//Variavel codigoEscolhido recebendo o mÈtodo receberDados();
+		//Variavel codigoEscolhido recebendo o m√©todo receberDados();
 		codigoEscolhido = receberDados();
 		
-		//Variavel auxiliar para validar o cÛdigo do produto
+		//Variavel auxiliar para validar o c√≥digo do produto
 		boolean achouCodigoProduto = false;
 		
 		for (int x = 0; x < 10; x++) {
@@ -181,7 +181,7 @@ public class Application {
 					}
 				} // SEGUNDO IF ACABA AQUI
 
-				// SE FOR VERDADEIRO O IF J¡ ENTRA EXECUTANDO O M…TODO executarOperacao();
+				// SE FOR VERDADEIRO O IF J√Å ENTRA EXECUTANDO O M√âTODO executarOperacao();
 				if (decisaoEntrada("Continuar comprando?")) {
 					executarOperacao();
 				} else {
@@ -192,10 +192,10 @@ public class Application {
 
 		} // AQUI ACABA O FOR
 		if (achouCodigoProduto == false) {
-			System.out.println("Ops.. esse cÛdigo n„o existe..");
+			System.out.println("Ops.. esse c√≥digo n√£o existe..");
 			desejaContinuar();
 		}
-	}// A CLASSE OPERA«√O ACABA AQUI
+	}// A CLASSE OPERA√á√ÉO ACABA AQUI
 
 	
 	private static void executarOpercao(int x) {
@@ -203,10 +203,10 @@ public class Application {
 	
 }
 
-	//############## FUN«√O LISTAR PRODUTOS ###################
+	//############## FUN√á√ÉO LISTAR PRODUTOS ###################
 	public static void listarProdutos() {
 		System.out.print("#DevShoes");
-		System.out.print("#CodStyle È vida!\n\n");
+		System.out.print("#CodStyle √© vida!\n\n");
 		System.out.println("COD\t  Produto \t\t Valor  Qnt\n");
 		for (int y = 0; y < 10; y++) {
 				for (y = 0; y < 10; y++)
@@ -214,60 +214,60 @@ public class Application {
 		}// Aqui acaba o for
 		System.out.println("\n\n\n");
 		System.out.println("Digite exemplo: G2-2");
-		System.out.print("Selecione o cÛdigo do produto: ");
+		System.out.print("Selecione o c√≥digo do produto: ");
 	}
 	
-	//############## Criando uma funÁ„o parar tratar excess„o ###################
+	//############## Criando uma fun√ß√£o parar tratar excess√£o ###################
 	public static void desejaContinuar() {
 		System.out.println("\n\n");
 		System.out.print("Se deseja tentar novamente digite S/N");
 		String continuarComprando = mySc.next();
 		
-		//MÈtodo equalsIgnoreCase vai referenciar a variavel ignorando se È maiuscula ou minuscula
+		//M√©todo equalsIgnoreCase vai referenciar a variavel ignorando se √© maiuscula ou minuscula
 		if("s".equalsIgnoreCase(continuarComprando)) {
 			executarOperacao();
 		}else if("n".equalsIgnoreCase(continuarComprando)) {
-			System.out.println("AtÈ breve..");
+			System.out.println("At√© breve..");
 		}else {
 			desejaContinuar();
 		}
 	}
 	
-	//############## Sobrecarga da funÁ„o receberDados ###################
+	//############## Sobrecarga da fun√ß√£o receberDados ###################
 	public static String receberDados(){
 		mySc = new Scanner(System.in);
 		return mySc.next().toUpperCase();
 	}
 	
-	//############## FunÁ„o VALIDAR ENTRADA ###################
+	//############## Fun√ß√£o VALIDAR ENTRADA ###################
 	public static boolean decisaoEntrada(String mensagem){
 		
 		System.out.println("\n\n ");
 		System.out.printf("\t\t\t      %s \n ",mensagem);
 		System.out.printf("\t\t\t\t    S/N ");
 		
-		//Passando os dados para vari·vel auxiliar desejaComprar
+		//Passando os dados para vari√°vel auxiliar desejaComprar
 		desejaComprar = receberDados();
 		
 		//Validando a entrada de desejaComprar
 		if("s".equalsIgnoreCase(desejaComprar)){
 			return true;
-			//Sendo verdadeiro o mÈtodo executarOperaÁ„o È chamado
+			//Sendo verdadeiro o m√©todo executarOpera√ß√£o √© chamado
 		}else if("n".equalsIgnoreCase(desejaComprar)) {
 			return false;
-			//Sendo falso È impresso um atÈ breve
+			//Sendo falso √© impresso um at√© breve
 		}else {
-			System.out.println("CÛdigo inv·lido.. Digite S/N");
+			System.out.println("C√≥digo inv√°lido.. Digite S/N");
 			return decisaoEntrada(mensagem);
 		}
 	}
 	
-	//############## FUN«√O - getApresentaÁ„o ###################
+	//############## FUN√á√ÉO - getApresenta√ß√£o ###################
 	public static void getApresentacao() {
 		for (int x = 0; x < 4; ++x) {
 			System.out.print("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 		}
-		System.out.println("|||||||||||||||||||| Loja DevShoes - CodeStyle È vida! ||||||||||||||||||||");
+		System.out.println("|||||||||||||||||||| Loja DevShoes - CodeStyle √© vida! ||||||||||||||||||||");
 		for (int x = 0; x < 4; ++x) {
 			System.out.print("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 		}
@@ -275,7 +275,7 @@ public class Application {
 		if(decisaoEntrada("Deseja comprar?")) {
 			executarOperacao();
 		}else {
-			System.out.println("AtÈ breve...");
+			System.out.println("At√© breve...");
 		}
 		
 	}
